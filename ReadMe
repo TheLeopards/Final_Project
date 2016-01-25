@@ -1,0 +1,18 @@
+Downloading Landsat data from Earth Explorer/espa
+
+The Landsat images can be downloaded via ESPA (http://espa.cr.usgs.gov/ordering/new). You need to have an account before being able to request data to be pre-processed.
+
+Placing your order
+
+Once you have entered your credentials, you may upload the Scene.txt file with the list of scenes used in this project that need to be pre-processed. Select input products and product metadata as Source Products. From the Climate Data Records select CFMask and Surface Reflectance. The format should be GeoTiff.
+
+Downloading the data
+
+Once you receive the e-mail from ESPA notifying you that your order has been pre-processed, you will be able to proceed to the download of the data. 
+
+####### - for large amounts of data:
+
+Because the amount of scenes is usually large, the use of a download manager is highly recommended. Two options:
+
+    The Bulk Download Application
+    The DownloadThemAll plugin of the firefox browser
