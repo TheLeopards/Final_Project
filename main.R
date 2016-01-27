@@ -13,8 +13,9 @@ getwd()
 ## checking cloud cover for area of interest, if cloud cover is less than 20%, it untars 
 ## list of downloaded tar files
 
- ## , "data/LT51940282003234-SC20160126032814.tar.gz", "data/LT51940282010221-SC20160125050415.tar.gz", "data/LT51940282011240-SC20160126032704.tar.gz"
-tarList <- list("data/LT51940282001212-SC20160125050334.tar.gz")
+##"data/LT51940282009218-SC20160127034452.tar.gz", "data/LT51940282001212-SC20160125050334.tar.gz", "data/LT51940282003234-SC20160126032814.tar.gz", "data/LT51940282010221-SC20160125050415.tar.gz", "data/LT51940282011240-SC20160126032704.tar.gz"
+
+tarList <- list("data/LT51940282009250-SC20160127034608.tar.gz")
 source("R/ImageSelection.R")
 ImageSelection()
 
@@ -25,6 +26,10 @@ CloudMask()
 
 source("R/Calc_NDSI.R")
 Calc_NDSI()
+
+source("R/Visualisation_NDSI.r") #- good, but rename with .R
+
+source("R/NDSI_overlay.R") #- under construction
 # Plot the stack and the cloud mask on top of each other
 #plotRGB(RhoneG, 1,2,3)
 #plot(cloud, add = TRUE, legend = FALSE)
@@ -40,5 +45,7 @@ Calc_NDSI()
 #plotRGB(RhoneG4, 1,2,3)
 
 
-#plot(ndsi)
+
+
+
 

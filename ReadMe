@@ -9,10 +9,7 @@ Once you have entered your credentials, you may upload the Scene.txt file with t
 Downloading the data
 
 Once you receive the e-mail from ESPA notifying you that your order has been pre-processed, you will be able to proceed to the download of the data. 
+The amount of scenes is large so the use of a download manager is highly recommended. Two options:
 
-####### - for large amounts of data:
-
-Because the amount of scenes is usually large, the use of a download manager is highly recommended. Two options:
-
-    The Bulk Download Application
-    The DownloadThemAll plugin of the firefox browser
+   -  The Bulk Download Application
+    - The DownloadThemAll plugin of the firefox browser

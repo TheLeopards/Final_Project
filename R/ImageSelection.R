@@ -34,7 +34,7 @@ ImageSelection <- function() {
 			stack_bandsCF <- addLayer(stack_bands, list_cloud)
 			
 			## cropping to extent of Rhone Glacier
-			crop(stack_bandsCF, extentArea, filename=paste("data/",substr(folder, 6, 18), sep = ""), datatype='INT2S', overwrite=TRUE)
+			crop(stack_bandsCF, extentArea, filename=paste("data/",substr(folder, 6, 21), sep = ""), datatype='INT2S', overwrite=TRUE)
 			
 		}
 		else {
@@ -45,3 +45,20 @@ ImageSelection <- function() {
 		unlink(list_del)
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

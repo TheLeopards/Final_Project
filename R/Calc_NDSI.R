@@ -22,8 +22,6 @@ Calc_NDSI <- function() {
 		ndsi[ndsi > 0.4] <- 1
 		writeRaster(ndsi, filename = paste("output/NDSI",substr(stack,17,33), sep = "_"), overwrite=TRUE)
 		
-		plot(ndsi)
-		
 	} 
 	
 }

@@ -9,7 +9,7 @@ ImageList <- (list.files("data", pattern = "*.grd", full.names = TRUE))
 
 CloudMask <- function() {
 	cloud2NA <- function(x, y){
-		x[y == 4 ] <- NA
+		x[y == 4 | y == 1] <- NA
 		return(x)
 	}
 	## applying the cloud2NA function
@@ -18,6 +18,7 @@ CloudMask <- function() {
 		CFmask <- Image_brick5[[5]]
 		Image_brick4 <- dropLayer(Image_brick5, 5)
 		# Apply the function on the two raster objects using overlay
-		overlay(x = Image_brick4, y = CFmask, fun = cloud2NA, filename = paste("output/cloudfree",substr(stack,7,19), sep = "_"), overwrite=TRUE)
+		overlay(x = Image_brick4, y = CFmask, fun = cloud2NA, filename = paste("output/cloudfree",substr(stack,6,22), sep = "_"), overwrite=TRUE)
 	} 
 }
+
