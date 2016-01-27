@@ -4,6 +4,7 @@
 library(sp)
 library(raster)
 
+
 ImageList <- (list.files("output", pattern = glob2rx("cloud*.grd"), full.names = TRUE))
 
 
@@ -15,7 +16,14 @@ Calc_NDSI <- function() {
 		LT5 <- Image_brick[[4]]
 		# Calculating NDSI
 		# Apply the function on the two raster objects using overlay
-		ndsi <- overlay(LT3, LT5, fun = function(x,y){(x-y)/(x+y)}, filename = paste("output/NDSI",substr(stack,19,30), sep = "_"), overwrite=TRUE)
+		ndsi <- overlay(LT3, LT5, fun = function(x,y){(x-y)/(x+y)})
+		## assigning NA to areas which are not snow (threshold for snow is NDSI>0.4)
+		ndsi[ndsi <= 0.4] <- NA
+		ndsi[ndsi > 0.4] <- 1
+		writeRaster(ndsi, filename = paste("output/NDSI",substr(stack,17,33), sep = "_"), overwrite=TRUE)
+		
+		plot(ndsi)
+		
 	} 
 	
 }
